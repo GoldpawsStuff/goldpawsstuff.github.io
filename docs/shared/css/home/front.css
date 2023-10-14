@@ -1,0 +1,111 @@
+/*
+* Copyright (c) 2022 Lars Norberg. All rights reserved.
+*/
+
+/* Import tweaks & fixes */
+@import "../common/fullscreenfadein.css";
+@import "../common/fixviewportunits.css";
+
+/* Import font definitions */
+@import "../fonts/librebaskerville-regular.css";
+@import "../fonts/marcellussc-regular.css";
+@import "../fonts/roboto-all.css";
+
+/* Import color scheme */
+@import "../common/colorscheme-standard.css";
+
+/* Variables */
+:root {
+	--logotext: 				"NV";
+	--logospacing: 				.25em;
+
+	--arrow-border: 			.3125rem solid var(--black);
+	--arrow-border-alternate: 	.3125rem solid var(--gray);
+	--arrow-border-size: 		2.5rem;
+
+	--arrow-down-transform: 	translate(0, -25%) rotate(45deg);
+	--arrow-down-animation: 	arrowFadeIn 1.25s linear 1.5s 1 forwards,
+								arrowBounceDown 10s linear 1.5s infinite forwards;
+
+	--arrow-up-transform: 		translate(0, 25%) rotate(225deg);
+	--arrow-up-animation: 		arrowFadeIn 1.25s linear 1.5s 1 forwards,
+								arrowBounceUp 10s linear 1.5s infinite forwards;
+}
+
+/* Reset everything */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+	/* Don't allow text to be selected/marked */
+	-webkit-user-select: none;
+			user-select: none;
+
+}
+
+/* Lock the main tags to a single screen app layout */
+html, body {
+	width: 100vw;
+	width: calc(var(--vw, 1vw) * 100);
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: 1rem;
+	}
+	body::backdrop {
+		background-color: var(--white);
+	}
+
+h1 {
+	font-family: MarcellusSC;
+	font-size: 2.5rem;
+	font-variant: small-caps;
+	font-weight: normal;
+	text-rendering: geometricPrecision;
+	cursor: default;
+	}
+	h1::after {
+		content: var(--logotext);
+		width: 100%;
+		height: 100%;
+		font-family: inherit;
+		font-size: inherit;
+		font-variant: inherit;
+		font-weight: inherit;
+		letter-spacing: var(--logospacing);
+		text-shadow: 0 -1px 0 var(--highlight);
+	}
+
+h2,h3,h4,h5,h6 {
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 1.25;
+	text-rendering: optimizeSpeed;
+}
+
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1em; }
+h5 { font-size: .875rem; }
+h6 { font-size: .75rem; }
+
+p {
+	font-family: Roboto, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.125rem;
+	line-height: 1.75;
+	text-rendering: optimizeSpeed;
+}

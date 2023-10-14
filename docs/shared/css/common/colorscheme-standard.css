@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2022 Lars Norberg. All rights reserved.
+*/
+
+:root {
+
+	/* Named colors */
+	--white: rgba(255,255,255,1);
+	--offwhite: rgba(250,250,250,1);
+	--lightgray: rgba(220,220,220,1);
+	--gray: rgba(160,160,160,1);
+	--darkgray: rgba(80,80,80,1);
+	--verydarkgray: rgba(33,33,33,1);
+	--black: rgba(0,0,0,1);
+	--red: rgba(220,96,66,1);
+	--darkred: rgba(170,66,33,1);
+
+	/* Functional colors */
+	--outer-shadow: rgba(0,0,0,.25);
+
+	/* Widget colors */
+	--text-primary-color: var(--verydarkgray);
+	--text-primary-shadow-color: var(--white);
+	--button-primary-text-color: var(--offwhite);
+	--button-primary-text-shadow-color: var(--outer-shadow);
+	--button-primary-border-color: var(--darkred);
+	--button-primary-background-color: var(--red);
+	--button-secondary-text-color: var(--darkgray);
+	--button-secondary-border-color: var(--gray);
+	--button-secondary-background-color: transparent;
+
+
+}

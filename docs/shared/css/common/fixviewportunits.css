@@ -1,0 +1,10 @@
+/* 
+* Copyright (c) 2022 Lars Norberg. All rights reserved. 
+*/
+
+:root {
+	--vh: 1vh;
+	--vw: 1vw;
+	--vmax: 1vmax;
+	--vmin: 1vmin;
+}
